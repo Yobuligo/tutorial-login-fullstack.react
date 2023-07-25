@@ -3,7 +3,7 @@ import { ILabeledInputProps } from "./ILabeledInputProps";
 
 export const LabeledInput: React.FC<ILabeledInputProps> = (props) => {
   const elementId = useId();
-  const [value, setValue] = useState(props.initialValue);
+  const [value, setValue] = useState(props.initialValue ?? "");
 
   const onValueChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.currentTarget.value);
@@ -11,18 +11,21 @@ export const LabeledInput: React.FC<ILabeledInputProps> = (props) => {
   };
 
   return (
-    <div className={props.className}>
+    <>
       <div>
-        <label htmlFor={elementId}>{props.label}</label>
+        <label className={props.className} htmlFor={elementId}>
+          {props.label}
+        </label>
       </div>
       <div>
         <input
-          type="text"
+          className={props.className}
+          type={props.type ?? "text"}
           id={elementId}
           value={value}
           onChange={onValueChange}
         />
       </div>
-    </div>
+    </>
   );
 };

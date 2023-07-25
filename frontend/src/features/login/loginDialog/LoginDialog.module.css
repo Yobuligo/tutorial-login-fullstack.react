@@ -1,5 +1,13 @@
-.loginDialog input {
-  font-size: larger;
+.loginDialog {
+  width: 20rem;
 }
 
+.labeledInput {
+  font-size: large;
+  width: 100%;
+}
 
+.loginButton {
+  display: flex;
+  justify-content: center;
+}
