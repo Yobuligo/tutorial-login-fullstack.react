@@ -4,11 +4,13 @@ import styles from "./ModalDialog.module.css";
 
 export const ModalDialog: React.FC<IModalDialogProps> = (props) => {
   return (
-    <div className={styles.modalDialog}>
+    <>
       {ReactDOM.createPortal(
-        props.children,
+        <div className={styles.backdrop}>
+          <div className={styles.modalDialog}>{props.children}</div>
+        </div>,
         document.getElementById("modalContainer")!
       )}
-    </div>
+    </>
   );
 };

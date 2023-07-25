@@ -1,7 +1,13 @@
-.modalDialog {
+.backdrop {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   background-color: rgba(156, 156, 156, 0.514);
+}
+
+.modalDialog {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
 }
