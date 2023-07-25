@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import "./App.css";
+import { ModalDialog } from "./components/modalDialog/ModalDialog";
 import { LoginDialog } from "./features/login/loginDialog/LoginDialog";
-import { ModalDialog } from "./features/modalDialog/ModalDialog";
 
 const App: React.FC = () => {
   const [showModalDialog, setShowModalDialog] = useState(false);
   return (
     <>
       {showModalDialog && (
-        <ModalDialog onClose={() => setShowModalDialog(false)}>
-          <LoginDialog />
+        <ModalDialog>
+          <LoginDialog
+            onLogin={() => {
+              setShowModalDialog(false);
+            }}
+          />
         </ModalDialog>
       )}
       <button

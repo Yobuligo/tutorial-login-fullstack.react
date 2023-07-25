@@ -18,7 +18,7 @@ export const LoginDialog: React.FC<ILoginDialog> = (props) => {
           type="password"
         />
         <div className={styles.loginButton}>
-          <button>Login</button>
+          <button onClick={props.onLogin}>Login</button>
         </div>
         <div className={styles.signUp}>
           <SignUpButton />

@@ -1,1 +1,3 @@
-export interface ILoginDialog {}
+export interface ILoginDialog {
+  onLogin?: () => void;
+}
