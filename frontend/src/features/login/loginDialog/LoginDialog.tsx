@@ -1,5 +1,6 @@
 import { Card } from "../../../components/card/Card";
 import { LabeledInput } from "../../../components/labeledInput/LabeledInput";
+import { SignUpButton } from "../../signup/signupButton/SignUpButton";
 import { ILoginDialog } from "./ILoginDialog";
 import styles from "./LoginDialog.module.css";
 
@@ -19,7 +20,9 @@ export const LoginDialog: React.FC<ILoginDialog> = (props) => {
         <div className={styles.loginButton}>
           <button>Login</button>
         </div>
-        <div>create Account</div>
+        <div className={styles.signUp}>
+          <SignUpButton />
+        </div>
       </form>
     </Card>
   );

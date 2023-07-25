@@ -1,3 +1,3 @@
 export const SignUpButton: React.FC = () => {
-  return <></>;
+  return <div>Sign Up</div>;
 };
