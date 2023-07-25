@@ -1,3 +1,5 @@
+import styles from "./SignUpButton.module.css";
+
 export const SignUpButton: React.FC = () => {
-  return <div>Sign Up</div>;
+  return <div className={styles.signUpButton}>Sign Up</div>;
 };
