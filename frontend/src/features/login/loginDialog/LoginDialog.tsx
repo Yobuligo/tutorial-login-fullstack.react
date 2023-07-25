@@ -1,4 +1,5 @@
-import { LabeledInput } from "../../../components/LabeledInput";
+import { Card } from "../../../components/card/Card";
+import { LabeledInput } from "../../../components/labeledInput/LabeledInput";
 import { ILoginDialog } from "./ILoginDialog";
 import styles from "./LoginDialog.module.css";
 
@@ -7,8 +8,8 @@ export const LoginDialog: React.FC<ILoginDialog> = (props) => {
     event.preventDefault();
 
   return (
-    <>
-      <form onSubmit={onSubmit} className={styles.loginDialog}>
+    <Card className={styles.loginDialog}>
+      <form onSubmit={onSubmit}>
         <LabeledInput className={styles.labeledInput} label="Username" />
         <LabeledInput
           className={styles.labeledInput}
@@ -20,6 +21,6 @@ export const LoginDialog: React.FC<ILoginDialog> = (props) => {
         </div>
         <div>create Account</div>
       </form>
-    </>
+    </Card>
   );
 };
