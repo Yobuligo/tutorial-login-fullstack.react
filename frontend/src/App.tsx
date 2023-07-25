@@ -8,7 +8,7 @@ const App: React.FC = () => {
   return (
     <>
       {showModalDialog && (
-        <ModalDialog>
+        <ModalDialog onClose={() => setShowModalDialog(false)}>
           <LoginDialog />
         </ModalDialog>
       )}
