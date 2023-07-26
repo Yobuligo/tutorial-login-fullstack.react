@@ -5,10 +5,15 @@ import { LoginDialog } from "./features/login/loginDialog/LoginDialog";
 
 const App: React.FC = () => {
   const [showModalDialog, setShowModalDialog] = useState(false);
+
   return (
     <>
       {showModalDialog && (
-        <ModalDialog>
+        <ModalDialog
+          onClose={() => {
+            setShowModalDialog(false);
+          }}
+        >
           <LoginDialog
             onLogin={() => {
               setShowModalDialog(false);
@@ -22,7 +27,7 @@ const App: React.FC = () => {
           setShowModalDialog(true);
         }}
       >
-        This a a test button
+        Login
       </button>
     </>
   );
